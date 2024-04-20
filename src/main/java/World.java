@@ -19,6 +19,7 @@ public class World {
     // level info
     private static final String MAP_1_FILE = "res/levels/1.tmx";
     private static final String MAP_2_FILE = "res/levels/2.tmx";
+    private static final String MAP_3_FILE = "res/levels/3.tmx";
     private static final String WAVES_FILE = "res/levels/waves.txt";
     private static final int MAP_WIDTH = 1024;
     private static final int MAP_HEIGHT = 768;
@@ -212,6 +213,13 @@ public class World {
             spriteList.clear();
             spriteQueue.clear();
             loadLevel(MAP_2_FILE,WAVES_FILE);
+            levelNumber++;
+            ShadowDefend.reset();
+        } else if (levelNumber==2) {
+            waveList.clear();
+            spriteList.clear();
+            spriteQueue.clear();
+            loadLevel(MAP_3_FILE,WAVES_FILE);
             levelNumber++;
             ShadowDefend.reset();
         }
